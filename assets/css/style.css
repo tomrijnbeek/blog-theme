@@ -333,6 +333,32 @@ body {
   background: #111;
   color: #ccc; }
 
+.site-footer-content {
+  display: flex;
+  padding: 24px 0; }
+  .site-footer-content .copyright {
+    flex: 1; }
+  .site-footer-content .site-footer-nav a {
+    margin-left: 20px;
+    position: relative; }
+    .site-footer-content .site-footer-nav a:not(:first-child):before {
+      background: #ccc;
+      border-radius: 2px;
+      content: "";
+      height: 4px;
+      left: -12px;
+      position: absolute;
+      top: 40%;
+      width: 4px; }
+  .site-footer-content a {
+    color: white;
+    text-decoration: none; }
+    .site-footer-content a:hover {
+      text-decoration: underline; }
+
+.flex-space {
+  flex: 1; }
+
 .post-content {
   display: flex;
   flex-direction: column;

@@ -21,3 +21,41 @@
   background: $bg-color-dark;
   color: $font-color-light;
 }
+
+.site-footer-content {
+  display: flex;
+  padding: 24px 0;
+
+  .copyright {
+    flex: 1;
+  }
+
+  .site-footer-nav {
+    a {
+      margin-left: 20px;
+      position: relative;
+
+      &:not(:first-child):before {
+        background: $font-color-light;
+        border-radius: 2px;
+        content: "";
+        height: 4px;
+        left: -12px;
+        position: absolute;
+        top: 40%;
+        width: 4px;
+      }
+    }
+  }
+
+  a {
+    color: $link-color-light;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+
+}
