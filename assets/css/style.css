@@ -304,8 +304,34 @@ template {
 [hidden] {
   display: none; }
 
+* {
+  box-sizing: border-box; }
+
 html, body {
   font-family: "Source Sans Pro", sans-serif; }
+
+body {
+  background: #111;
+  min-height: 100%; }
+
+.inner {
+  border: 1px solid transparent;
+  max-width: 960px;
+  margin: 0 auto; }
+
+.site-wrapper {
+  background: #eee; }
+
+.site-header .inner,
+.site-main .inner {
+  background: white; }
+
+.site-main .inner {
+  min-height: 500px; }
+
+.site-footer {
+  background: #111;
+  color: #ccc; }
 
 .post-content {
   display: flex;

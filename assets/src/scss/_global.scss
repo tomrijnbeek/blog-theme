@@ -1,3 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   font-family: $font-family;
+}
+
+body {
+  background: $bg-color-dark;
+  min-height: 100%;
 }

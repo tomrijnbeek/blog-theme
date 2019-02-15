@@ -1,0 +1,23 @@
+.inner {
+  border: 1px solid transparent;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.site-wrapper {
+  background: #eee;
+}
+
+.site-header .inner,
+.site-main .inner {
+  background: white;
+}
+
+.site-main .inner {
+  min-height: 500px;
+}
+
+.site-footer {
+  background: $bg-color-dark;
+  color: $font-color-light;
+}
