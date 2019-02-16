@@ -5,16 +5,12 @@
 }
 
 .site-wrapper {
-  background: #eee;
+  background: $bg-color-light;
 }
 
 .site-header .inner,
 .site-main .inner {
-  background: white;
-}
-
-.site-main .inner {
-  min-height: 500px;
+  background: $bg-color-content;
 }
 
 .site-footer {

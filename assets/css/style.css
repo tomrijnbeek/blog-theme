@@ -320,14 +320,11 @@ body {
   margin: 0 auto; }
 
 .site-wrapper {
-  background: #eee; }
+  background: #f5f5f5; }
 
 .site-header .inner,
 .site-main .inner {
   background: white; }
-
-.site-main .inner {
-  min-height: 500px; }
 
 .site-footer {
   background: #111;
