@@ -13,6 +13,28 @@
   background: $bg-color-content;
 }
 
+.site-nav {
+  display: flex;
+
+  .site-nav-left {
+    flex: 1;
+  }
+
+  .site-nav-left,
+  .site-nav-right {
+    display: flex;
+  }
+
+  .social-link,
+  .rss-button {
+    height: 1em;
+
+    svg {
+      height: 1.5rem;
+    }
+  }
+}
+
 .site-footer {
   background: $bg-color-dark;
   color: $font-color-light;
