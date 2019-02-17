@@ -4,9 +4,5 @@
 
 html, body {
   font-family: $font-family;
-}
-
-body {
-  background: $bg-color-dark;
-  min-height: 100%;
+  height: 100%;
 }

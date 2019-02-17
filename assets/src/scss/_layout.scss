@@ -1,20 +1,31 @@
+.site-wrapper {
+  background: $bg-color-light;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 .inner {
   border: 1px solid transparent;
   max-width: 960px;
   margin: 0 auto;
 }
 
-.site-wrapper {
-  background: $bg-color-light;
-}
-
-.site-header .inner,
 .site-main .inner {
   background: $bg-color-content;
+  padding: 16px;
+}
+
+.site-header {
+  background: url('https://tomrijnbeek.nl/assets/img/layout/background.jpg');
+  background-size: cover;
+  margin-bottom: -80px;
+  padding-bottom: 80px;
 }
 
 .site-nav {
   display: flex;
+  margin: 8px 0;
 
   .site-nav-left {
     flex: 1;
@@ -25,14 +36,47 @@
     display: flex;
   }
 
+  .nav {
+    @include list-unstyled();
+
+    display: flex;
+
+    li {
+      a {
+        color: $link-color-light;
+        padding: 8px 12px;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &.nav-current {
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
   .social-link,
   .rss-button {
     height: 1em;
 
     svg {
       height: 1.5rem;
+
+      circle,
+      path {
+        fill: $link-color-light;
+      }
     }
   }
+}
+
+.site-main {
+  flex: 1;
 }
 
 .site-footer {

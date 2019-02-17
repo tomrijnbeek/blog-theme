@@ -10,9 +10,24 @@
   </header>
   <section class="post-excerpt">
     <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+    {{!-- {{content}} --}}
   </section>
   <footer class="post-meta">
-    <ul class="author-list">
+    Posted
+    <time
+        class="post-meta-date"
+        datetime="{{date format="YYYY-MM-DD"}}">
+      {{date format="D MMMM YYYY"}}
+    </time>
+    by
+    <a
+        href="{{primary_author.url}}"
+        class="post-meta-author"
+        rel="author">
+      {{primary_author.name}}
+    </a>
+
+    {{!-- <ul class="author-list">
       {{#foreach authors}}
 
       <div class="author-name-tooltip">
@@ -30,7 +45,7 @@
       {{/foreach}}
     </ul>
 
-    <span class="reading-time">{{reading_time}}</span>
+    <span class="reading-time">{{reading_time}}</span> --}}
   </footer>
 </article>
 {{/foreach}}
