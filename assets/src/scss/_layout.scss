@@ -15,9 +15,18 @@
   flex-basis: 960px;
   flex-grow: 0;
   margin: 0 10px;
+  min-width: 0;
+
+  @media (max-width: $break-s) {
+    margin: 0;
+  }
 
   &.with-about-bar {
     padding-left: $about-sidebar-offset;
+
+    @media (max-width: $break-m) {
+      padding-left: 0;
+    }
   }
 }
 
@@ -29,13 +38,26 @@
 
   .site-header-content {
     color: $font-color-light;
-    margin-bottom: 32px;
+    margin: 0 8px 32px;
+
+    @media (max-width: $break-s) {
+      text-align: center;
+    }
   }
 }
 
 .site-nav {
   display: flex;
   margin: 8px 0;
+
+  @media (max-width: $break-s) {
+    align-items: center;
+    flex-direction: column;
+
+    .site-nav-left {
+      margin-bottom: 8px;
+    }
+  }
 
   .site-nav-left {
     flex: 1;
@@ -104,6 +126,10 @@
 
   .inner {
     display: flex;
+
+    @media (max-width: $break-m) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -114,6 +140,13 @@
   flex-shrink: 0;
   margin-right: 16px;
   width: $about-sidebar-width;
+
+  @media (max-width: $break-m) {
+    align-self: center;
+    margin-bottom: 16px;
+    margin-right: 0;
+    width: 100%;
+  }
 
   .about-me-img {
     border-radius: 50%;
