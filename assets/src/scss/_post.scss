@@ -25,3 +25,15 @@
     font-size: $footer-font-size;
   }
 }
+
+.post-full-image {
+  margin: -$content-padding;
+  margin-bottom: $content-padding;
+  overflow: hidden;
+}
+
+.post-full-image img {
+  height: 240px;
+  object-fit: cover;
+  width: 100%;
+}

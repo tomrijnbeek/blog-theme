@@ -5,10 +5,16 @@
   min-height: 100%;
 }
 
+.outer {
+  justify-content: center;
+  display: flex;
+}
+
 .inner {
   border: 1px solid transparent;
-  max-width: 960px;
-  margin: 0 auto;
+  flex-basis: 960px;
+  flex-grow: 0;
+  margin: 0 10px;
 
   &.with-about-bar {
     padding-left: $about-sidebar-offset;
@@ -142,7 +148,7 @@
   background: $bg-color-content;
   box-shadow: $low-elevation-shadow;
   flex: 1;
-  padding: 16px;
+  padding: $content-padding;
 }
 
 .pagination {
