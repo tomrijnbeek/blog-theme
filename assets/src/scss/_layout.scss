@@ -9,6 +9,10 @@
   border: 1px solid transparent;
   max-width: 960px;
   margin: 0 auto;
+
+  &.with-about-bar {
+    padding-left: $about-sidebar-offset;
+  }
 }
 
 .site-header {
@@ -16,14 +20,16 @@
   background-size: cover;
   margin-bottom: -$header-overlap;
   padding-bottom: $header-overlap;
+
+  .site-header-content {
+    color: $font-color-light;
+    margin-bottom: 32px;
+  }
 }
 
 .site-nav {
   display: flex;
   margin: 8px 0;
-
-  // temp hack
-  padding-left: 216px;
 
   .site-nav-left {
     flex: 1;
@@ -32,6 +38,18 @@
   .site-nav-left,
   .site-nav-right {
     display: flex;
+  }
+
+  .site-nav-logo {
+    color: $link-color-light;
+    font-size: $font-size;
+    font-variant: small-caps;
+    padding: 4px 12px;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .nav {
@@ -77,10 +95,10 @@
 
 .site-main {
   flex: 1;
-}
 
-.site-main .inner {
-  display: flex;
+  .inner {
+    display: flex;
+  }
 }
 
 .about-me {
@@ -125,6 +143,21 @@
   box-shadow: $low-elevation-shadow;
   flex: 1;
   padding: 16px;
+}
+
+.pagination {
+  text-align: center;
+
+  .page-number {
+    margin: 0 8px;
+  }
+}
+
+.extra-pagination {
+  display: none;
+}
+.paged .extra-pagination {
+  display: initial;
 }
 
 .site-footer {

@@ -5,7 +5,8 @@ h1 {
 p,
 blockquote,
 ol,
-ul {
+ul,
+.p {
   font-size: $font-size;
   line-height: $line-height;
 }

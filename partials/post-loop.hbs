@@ -1,5 +1,5 @@
 {{! Previous/next page links - only displayed on page 2+ }}
-<div class="extra-pagination inner">
+<div class="extra-pagination">
   {{pagination}}
 </div>
 
@@ -9,43 +9,32 @@
     <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
   </header>
   <section class="post-excerpt">
-    <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+    <p>{{excerpt words="26"}}</p>
     {{!-- {{content}} --}}
   </section>
-  <footer class="post-meta">
-    Posted
-    <time
-        class="post-meta-date"
-        datetime="{{date format="YYYY-MM-DD"}}">
-      {{date format="D MMMM YYYY"}}
-    </time>
-    by
-    <a
-        href="{{primary_author.url}}"
-        class="post-meta-author"
-        rel="author">
-      {{primary_author.name}}
-    </a>
+  <footer class="post-footer" rel="content-info">
+    <div class="post-links">
+      <a class="read-more p" href="{{url}}">View full post &raquo;</a>
+    </div>
+    <div class="post-meta">
+      Posted
+      <time
+          class="post-meta-date"
+          datetime="{{date format="YYYY-MM-DD"}}">
+        {{date format="D MMMM YYYY"}}
+      </time>
+      by
+      <a
+          href="{{primary_author.url}}"
+          class="post-meta-author"
+          rel="author">
+        {{primary_author.name}}
+      </a>
 
-    {{!-- <ul class="author-list">
-      {{#foreach authors}}
-
-      <div class="author-name-tooltip">
-
-        {{#if profile_image}}
-        <a href="{{url}}" class="static-avatar">
-          <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}">{{name}}
-        </a>
-        {{else}}
-        <a href="{{url}}" class="static-avatar author-profile-image">{{> "icons/avatar"}}{{name}}</a>
-        {{/if}}
-
-      </div>
-
-      {{/foreach}}
-    </ul>
-
-    <span class="reading-time">{{reading_time}}</span> --}}
+      {{#if tags}}
+        in {{tags}}
+      {{/if}}
+    </div>
   </footer>
 </article>
 {{/foreach}}

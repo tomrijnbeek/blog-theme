@@ -1,22 +1,33 @@
-.post {
-  border-bottom: 1px solid #eee;
-  padding: 16px 0;
+.post-feed {
+  .post {
+    border-bottom: 1px solid #eee;
+    padding: 16px 0;
 
-  &:last-of-type {
-    border-bottom: none;
-  }
-}
-
-.post-header {
-  .post-title {
-    a {
-      color: $font-color-dark;
-      text-decoration: none;
+    &:last-of-type {
+      border-bottom: none;
     }
   }
-}
 
-.post-meta {
-  font-size: $footer-font-size;
-  text-align: right;
+  .post-header {
+    .post-title {
+      a {
+        color: $font-color-dark;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .post-footer {
+    align-items: baseline;
+    display: flex;
+
+    .post-links {
+      flex: 1;
+    }
+  }
+
+  .post-meta {
+    font-size: $footer-font-size;
+    text-align: right;
+  }
 }
