@@ -2,6 +2,11 @@
 $font-family: 'Source Sans Pro', sans-serif;
 $font-family-serif: 'Source Serif Pro', serif;
 
+// Font sizes
+$font-size: 13pt;
+$line-height: 1.6em;
+$footer-font-size: 11pt;
+
 // Colours
 $bg-color-dark: #111;
 $bg-color-light: #f5f5f5;
@@ -10,5 +15,16 @@ $bg-color-content: white;
 $font-color-dark: black;
 $font-color-light: #ccc;
 
-$link-color-dark: blue;
+$link-color-dark: #0d43c1;
 $link-color-light: white;
+
+// Sizes
+$header-overlap: 80px;
+$about-sidebar-width: 200px;
+$about-sidebar-padding: 16px;
+$about-sidebar-offset: $about-sidebar-width + $about-sidebar-padding;
+$about-avatar-size: 120px;
+
+// Shadow
+$low-elevation-shadow: 0 0 4px rgba(0, 0, 0, .1);
+$high-elevation-shadow: 0 0 8px black;

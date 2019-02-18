@@ -2,7 +2,19 @@ h1 {
   font-weight: lighter;
 }
 
-p {
-  font-size: 13pt;
-  line-height: 1.6em;
+p,
+blockquote,
+ol,
+ul {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+a {
+  color: $link-color-dark;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

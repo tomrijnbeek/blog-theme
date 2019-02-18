@@ -11,21 +11,19 @@
   margin: 0 auto;
 }
 
-.site-main .inner {
-  background: $bg-color-content;
-  padding: 16px;
-}
-
 .site-header {
   background: url('https://tomrijnbeek.nl/assets/img/layout/background.jpg');
   background-size: cover;
-  margin-bottom: -80px;
-  padding-bottom: 80px;
+  margin-bottom: -$header-overlap;
+  padding-bottom: $header-overlap;
 }
 
 .site-nav {
   display: flex;
   margin: 8px 0;
+
+  // temp hack
+  padding-left: 216px;
 
   .site-nav-left {
     flex: 1;
@@ -42,6 +40,8 @@
     display: flex;
 
     li {
+      margin: 0 4px;
+      
       a {
         color: $link-color-light;
         padding: 8px 12px;
@@ -62,7 +62,7 @@
 
   .social-link,
   .rss-button {
-    height: 1em;
+    margin: 0 4px;
 
     svg {
       height: 1.5rem;
@@ -79,6 +79,54 @@
   flex: 1;
 }
 
+.site-main .inner {
+  display: flex;
+}
+
+.about-me {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-right: 16px;
+  width: $about-sidebar-width;
+
+  .about-me-img {
+    border-radius: 50%;
+    box-shadow: $high-elevation-shadow;
+    display: block;
+    height: $about-avatar-size;
+    margin-top: ($about-avatar-size - $header-overlap) / 2;
+    width: $about-avatar-size;
+  }
+
+  .about-me-name {
+    color: #555;
+    font-family: $font-family-serif;
+    font-size: 18pt;
+    font-variant: small-caps;
+    margin: 8px 0;
+  }
+
+  .about-me-titles {
+    color: #777;
+    font-size: $footer-font-size;
+  }
+
+  .about-me-name,
+  .about-me-titles {
+    text-align: center;
+  }
+}
+
+.post-feed,
+.post-full {
+  background: $bg-color-content;
+  box-shadow: $low-elevation-shadow;
+  flex: 1;
+  padding: 16px;
+}
+
 .site-footer {
   background: $bg-color-dark;
   color: $font-color-light;
@@ -86,6 +134,7 @@
 
 .site-footer-content {
   display: flex;
+  font-size: $footer-font-size;
   padding: 24px 0;
 
   .copyright {
@@ -118,6 +167,4 @@
       text-decoration: underline;
     }
   }
-
-
 }
