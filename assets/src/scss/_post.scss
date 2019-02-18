@@ -18,16 +18,10 @@
   }
 
   .post-footer {
-    align-items: baseline;
-    display: flex;
-
-    .post-links {
-      flex: 1;
-    }
+    text-align: right;
   }
 
   .post-meta {
     font-size: $footer-font-size;
-    text-align: right;
   }
 }
