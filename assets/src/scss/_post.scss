@@ -50,6 +50,10 @@
 
 .post-full-meta {
   margin-bottom: 24px;
+
+  a, span, time {
+    font-size: $footer-font-size;
+  }
 }
 
 .post-full {
