@@ -18,7 +18,7 @@
     "scss-watch": "node-sass --watch -o assets/css assets/src/scss/style.scss"
   },
   "config": {
-    "posts_per_page": 3,
+    "posts_per_page": 8,
     "image_sizes": {
       "xxs": {
         "width": 30
@@ -41,6 +41,6 @@
     }
   },
   "devDependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.13.1"
   }
 }

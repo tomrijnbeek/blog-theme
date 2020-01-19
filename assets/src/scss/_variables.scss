@@ -7,9 +7,10 @@ $font-family: 'Source Sans Pro', sans-serif;
 $font-family-serif: 'Source Serif Pro', serif;
 
 // Font sizes
-$font-size: 13pt;
+$font-size: 16px;
+$font-size-small: 14px;
+$footer-font-size: $font-size-small;
 $line-height: 1.6em;
-$footer-font-size: 11pt;
 
 // Colours
 $bg-color-dark: #111;
@@ -21,6 +22,8 @@ $font-color-light: #ccc;
 
 $link-color-dark: #0d43c1;
 $link-color-light: white;
+
+$border-color: #eee;
 
 // Sizes
 $header-overlap: 80px;

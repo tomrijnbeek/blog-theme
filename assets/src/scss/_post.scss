@@ -1,6 +1,6 @@
 .post-feed {
   .post {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $border-color;
     padding: 16px 0;
 
     &:last-of-type {
@@ -26,9 +26,19 @@
   }
 }
 
-.post-full-image {
-  margin: -$content-padding;
+.post-nav {
+  border-bottom: 1px solid $border-color;
   margin-bottom: $content-padding;
+  padding: $content-padding 0;
+}
+
+.post-full {
+  width: 100%;
+}
+
+.post-full-image {
+  height: 240px + $content-padding;
+  margin: -$content-padding;
   overflow: hidden;
 }
 
@@ -36,4 +46,15 @@
   height: 240px;
   object-fit: cover;
   width: 100%;
+}
+
+.post-full-meta {
+  margin-bottom: 24px;
+}
+
+.post-full {
+  h2 {
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 4px;
+  }
 }

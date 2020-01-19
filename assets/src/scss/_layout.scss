@@ -22,7 +22,7 @@
   }
 
   &.with-about-bar {
-    padding-left: $about-sidebar-offset;
+    margin-left: $about-sidebar-offset;
 
     @media (max-width: $break-m) {
       padding-left: 0;
@@ -31,8 +31,7 @@
 }
 
 .site-header {
-  background: url('https://tomrijnbeek.nl/assets/img/layout/background.jpg');
-  background-size: cover;
+  background: $bg-color-dark;
   margin-bottom: -$header-overlap;
   padding-bottom: $header-overlap;
 
@@ -42,81 +41,6 @@
 
     @media (max-width: $break-s) {
       text-align: center;
-    }
-  }
-}
-
-.site-nav {
-  display: flex;
-  margin: 8px 0;
-
-  @media (max-width: $break-s) {
-    align-items: center;
-    flex-direction: column;
-
-    .site-nav-left {
-      margin-bottom: 8px;
-    }
-  }
-
-  .site-nav-left {
-    flex: 1;
-  }
-
-  .site-nav-left,
-  .site-nav-right {
-    display: flex;
-  }
-
-  .site-nav-logo {
-    color: $link-color-light;
-    font-size: $font-size;
-    font-variant: small-caps;
-    padding: 4px 12px;
-    text-decoration: none;
-    
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .nav {
-    @include list-unstyled();
-
-    display: flex;
-
-    li {
-      margin: 0 4px;
-      
-      a {
-        color: $link-color-light;
-        padding: 8px 12px;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
-      &.nav-current {
-        a {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-
-  .social-link,
-  .rss-button {
-    margin: 0 4px;
-
-    svg {
-      height: 1.5rem;
-
-      circle,
-      path {
-        fill: $link-color-light;
-      }
     }
   }
 }
@@ -133,7 +57,7 @@
   }
 }
 
-.about-me {
+.sidebar {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -173,6 +97,35 @@
   .about-me-name,
   .about-me-titles {
     text-align: center;
+  }
+
+  .sidebar-nav {
+    font-size: $font-size-small;
+    padding: 0 16px;
+    width: 100%;
+
+    ul.nav {
+      padding: 0;
+
+      li {
+        list-style: none;
+      }
+    }
+
+    hr {
+      border: 0.5px solid darken($border-color, 5%);
+    }
+
+    .icon-link {
+      svg {
+        height: 1em;
+  
+        circle,
+        path {
+          fill: $link-color-dark;
+        }
+      }
+    }
   }
 }
 

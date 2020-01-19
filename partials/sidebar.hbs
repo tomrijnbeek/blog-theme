@@ -1,0 +1,51 @@
+<aside class="sidebar">
+  <img
+      src="{{asset "img/me.jpg"}}"
+      class="about-me-img"
+      alt="Profile picture">
+  <div class="about-me-name">
+    Tom Rijnbeek
+  </div>
+  <div class="about-me-titles">
+    Programmer, game developer, coffee drinker
+  </div>
+  <nav class="sidebar-nav">
+    {{#if @site.navigation}}
+      {{navigation}}
+      <hr>
+    {{/if}}
+    <ul class="nav">
+      {{#if @site.twitter}}
+        <li>
+          <a class="icon-link"
+              href="{{twitter_url @site.twitter}}"
+              title="Twitter"
+              target="_blank"
+              rel="noopener">
+            {{> "icons/twitter"}}
+            Twitter
+          </a>
+        </li>
+      {{/if}}
+      <li>
+        <a class="icon-link"
+            href="https://github.com/tomrijnbeek"
+            title="Github"
+            target="_blank"
+            rel="noopener">
+          {{> "icons/github"}}
+          GitHub
+        </a>
+      </li>
+    </ul>
+    <hr>
+    <a class="icon-link"
+        href="{{@site.url}}/rss/"
+        title="RSS"
+        target="_blank"
+        rel="noopener">
+      {{> "icons/rss"}}
+      Subscribe
+    </a>
+  </nav>
+</aside>
