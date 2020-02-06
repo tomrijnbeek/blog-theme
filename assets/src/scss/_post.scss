@@ -35,9 +35,18 @@
 .post-full {
   width: 100%;
 
-  img
-  {
+  h2 {
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 4px;
+  }
+
+  img {
     max-height: 500px;
+    max-width: 100%;
+  }
+
+  .MJXc-display {
+    overflow: auto;
   }
 }
 
@@ -58,12 +67,5 @@
 
   a, span, time {
     font-size: $footer-font-size;
-  }
-}
-
-.post-full {
-  h2 {
-    border-bottom: 1px solid $border-color;
-    padding-bottom: 4px;
   }
 }
